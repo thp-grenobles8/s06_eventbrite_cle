@@ -17,7 +17,7 @@ Attendance.destroy_all
 puts " ✔"
 
 print "Creating fake users:"
-10.times do |user|
+1.times do |user|
   User.create!(
     email:              Faker::Name.first_name.downcase + '@yopmail.com',
     encrypted_password: "0xLOL",

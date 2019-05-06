@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation process
 
-Things you may want to cover:
+* `git clone https://github.com/thp-grenobles8/s06_eventbrite_cle.git`
 
-* Ruby version
+* `cd s06_eventbrite_cle`
 
-* System dependencies
+* `sudo chmod +x ./install.sh`
 
-* Configuration
+* `./install.sh`
 
-* Database creation
+---
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*Only 1 user is created, modify `/db/seeds.rb` if you want some more*
