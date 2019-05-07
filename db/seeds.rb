@@ -6,25 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-print "clearing Event:"
-Event.destroy_all
-puts " ✔"
-print "clearing User:"
-User.destroy_all
-puts " ✔"
-print "clearing Attendance:"
-Attendance.destroy_all
-puts " ✔"
+# print "clearing Event:"
+# Event.destroy_all
+# puts " ✔"
+# print "clearing User:"
+# User.destroy_all
+# puts " ✔"
+# print "clearing Attendance:"
+# Attendance.destroy_all
+# puts " ✔"
 
 print "Creating fake users:"
 1.times do |user|
-  User.create!(
+  u = User.new(
     email:              Faker::Name.first_name.downcase + '@yopmail.com',
     encrypted_password: "0xLOL",
     description:        Faker::Lorem.sentence(5),
     first_name:         Faker::Name.first_name,
-    last_name:          Faker::Name.last_name
+    last_name:          Faker::Name.last_name,
+    reset_password_token: nil,
+    reset_password_sent_at: nil
   )
+  u.save!(validate: false)
   end
 puts " ✔"
 

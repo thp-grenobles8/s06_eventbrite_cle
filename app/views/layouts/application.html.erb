@@ -37,7 +37,7 @@
             </li>
           <% else %>
             <li class="nav-item">
-              <%= link_to 'Profil', edit_user_registration_path(current_user), class: "nav-link" %>
+              <%= link_to 'Profil', user_path(current_user.id), class: "nav-link" %>
             </li>
             <li class="nav-item">
               <%= link_to 'Deconnexion', destroy_user_session_path(current_user), method: "delete", class: "nav-link" %>
