@@ -37,7 +37,7 @@ print "Creating fake events:"
     description:        Faker::Lorem.sentence(10),
     price:              rand(1...1000),
     location:           Faker::Books::Dune.planet,
-    user_id:            User.all.sample.id
+    administrator_id:   User.all.sample.id
   )
   end
 puts " ✔"

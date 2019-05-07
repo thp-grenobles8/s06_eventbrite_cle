@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  belongs_to :user, dependent: :destroy
+  belongs_to :administrator, class_name: 'User', dependent: :destroy
   has_many :attendances, dependent: :destroy
   has_many :users, through: :attendances
 
@@ -18,7 +18,7 @@ class Event < ApplicationRecord
   validates :location,    presence: true
 
   def not_past?
-    self.start_date < Time.now
+    self.start_date <= Time.now
   end
 
   def mod_5?
