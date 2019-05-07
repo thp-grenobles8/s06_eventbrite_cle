@@ -4,7 +4,6 @@ class UsersController < ApplicationController
     @user_events_organizing = []
     @user_events = []
     events_id = []
-
     # On cherche les EVENT_ID auquel notre @USER participe
     # > On insert l'EVENT_ID dans #find() afin d'effectuer une requette sur la table EVENTS
     @user.attendances.each do |attendance|
@@ -13,11 +12,6 @@ class UsersController < ApplicationController
       @user_events_organizing << Event.find(event_id) :
       @user_events << Event.find(event_id)
     end
-
-
-
-puts "&&&&&&&&&&&&&&&&&&&&&&&&&& #{@user_events}"
-puts "########################## #{@user_events_organizing}"
 
   end
 end

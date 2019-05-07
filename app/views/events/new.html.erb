@@ -1,2 +1,41 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<br><br>
+<div class="container">
+  <div class="card text-center">
+    <div class="card-header">
+      <h2>Create a new event</h2>
+    </div>
+    <div class="card-footer text-muted">
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="form-signin mt-3">
+      
+          <%= form_tag events_path, method: :post do %>
+
+            <p><%= label_tag "Date" %>
+            <%= text_field_tag "start_date_day", nil, placeholder: "yyyy-mm-dd", class: "form-control"%></p>
+
+            <p><%= label_tag "Hour" %>
+            <%= text_field_tag "start_date_hour", nil, placeholder: "hh-mm-ss", class: "form-control"%></p>
+
+            <p><%= label_tag :duration %>
+            <%= select_tag "duration", options_for_select(['5', '10', '15'], '15'), class: "form-control" %></p>
+
+            <p><%= label_tag :title %>
+            <%= text_field_tag "title", nil, placeholder: "Lorem Ipsum maggle", class: "form-control form-text"%></p>
+
+            <p><%= label_tag :description %>
+            <%= text_field_tag "description", nil, placeholder: "Lorem Ipsum Lorem Ipsum ", rows: "4", class: "form-control form-text"%></p>
+
+            <p><%= label_tag :price %>
+            <%= text_field_tag "price", nil, placeholder: "42", class: "form-control form-text"%></p>
+
+            <p><%= label_tag :location %>
+            <%= text_field_tag "location", nil, placeholder: "Chaux-Les-Crotenay", class: "form-control form-text"%></p>
+            
+            <%= hidden_field_tag 'administrator_id', current_user.id %>
+
+            <%= submit_tag "Submit", class: "btn btn-large btn-primary" %>
+          <% end %>
+
+    </div>

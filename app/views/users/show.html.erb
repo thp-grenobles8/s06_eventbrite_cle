@@ -11,10 +11,51 @@
     </div>
     <div class="card-footer text-muted">
     <br><br>
-      
+    
 
-  <% @user_events.each do |aze| %>
 
-  <p><%= aze.title %></p>
-<%end %>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Participate:
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <ul>
+              <% @user_events.each do |event| %>
+                <li><p><%= event.title %></p></li>
+              <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
 
+
+
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Organize:
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <ul>
+              <% @user_events_organizing.each do |event_o| %>
+                <li><p><%= event_o.title %></p></li>
+              <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
