@@ -2,6 +2,12 @@
   <div class="container">
     <h1 class="display-3">EventBrite,</h1>
     <p>Les evenements près de chez toi !</p><br>
+
+    <% if user_signed_in? %>
+      <a href="<%= new_event_path %>" class="btn btn-lg btn-outline-info btn-block">New event !</a>
+      <br>
+    <% end %>
+
   </div>
 </div>
 
