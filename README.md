@@ -1,5 +1,7 @@
 # README
 
+https://ich-r-u.herokuapp.com/
+
 ## Installation process
 
 * `git clone https://github.com/thp-grenobles8/s06_eventbrite_cle.git`
@@ -27,6 +29,8 @@ C'que j'ai mal/pas fait :
 * des _views_
 
 * des `before_action`
+
+* 3H: la version en ligne est full buggée (installation en local vite fait avec `install.sh`, fais des copiers/collers des commandes)
 
 * ... :^)
 

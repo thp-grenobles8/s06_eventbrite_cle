@@ -45,8 +45,8 @@ print "Creating fake events:"
   end
 puts " ✔"
 
-# FYK : Base58 = Base64 - les caractères relous ("l, i, o, 0") et "+" "/"
-print "Creating fake attendaces:"
+# FYI : Base58 = Base64 - les caractères relous ("l, i, o, 0") et "+" "/"
+print "Creating fake attendances:"
 42.times do |attendance|
   u = User.all.sample
   Attendance.create!(
