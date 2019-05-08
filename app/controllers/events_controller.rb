@@ -15,8 +15,12 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(
-      start_date:       params[:start_date_day] + " " +
-                        params[:start_date_hour],
+      start_date:       DateTime.new(params[:start_date_day].split("-")[0].to_i,
+                        params[:start_date_day].split("-")[1].to_i,
+                        params[:start_date_day].split("-")[2].to_i,
+                        params[:start_date_hour].split("-")[0].to_i,
+                        params[:start_date_hour].split("-")[1].to_i,
+                        params[:start_date_hour].split("-")[2].to_i),
       duration:         params[:duration],
       title:            params[:description],
       description:      params[:description],
