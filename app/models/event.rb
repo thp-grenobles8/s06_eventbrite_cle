@@ -18,7 +18,7 @@ class Event < ApplicationRecord
   validates :location,    presence: true
 
   def not_past?
-    self.start_date <= Time.now
+    self.start_date.future?
   end
 
   def mod_5?

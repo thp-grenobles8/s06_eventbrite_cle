@@ -4,6 +4,9 @@ class EventsController < ApplicationController
   end
   
   def show
+    @event = Event.find(params[:id])
+    @attendees = Attendance.where(event_id: @event.id).count
+    @administrator = User.where(id: @event.administrator_id)
   end
 
   def new
