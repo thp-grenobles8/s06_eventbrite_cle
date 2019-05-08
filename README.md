@@ -33,6 +33,3 @@ C'que j'ai mal/pas fait :
 * 3H: la version en ligne est full buggée (installation en local vite fait avec `install.sh`, fais des copiers/collers des commandes)
 
 * ... :^)
-
-
-<small>grasse mat [ON]</small>
