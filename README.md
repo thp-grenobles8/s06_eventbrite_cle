@@ -12,4 +12,23 @@
 
 ---
 
-*Only 1 user is created, modify `/db/seeds.rb` if you want some more*
+*Only 1 user is created through `install.sh`, modify `/db/seeds.rb` if you want some more*
+
+---
+
+C'que j'ai mal/pas fait :
+
+* les routes, check `/config/routes.rb` si tu veux un challenge 
+
+* le `users_controller` (celui là c'est le pompon je crois)
+
+* `users#edit` et `registration#edit`
+
+* des _views_
+
+* des `before_action`
+
+* ... :^)
+
+
+<small>grasse mat [ON]</small>
