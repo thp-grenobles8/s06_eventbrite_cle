@@ -1,3 +1,13 @@
+# PROJECT MIGRATED TO GITLAB
+
+https://gitlab.com/kawsay/eventbritelike
+
+### Everything below is depreciated
+
+
+
+
+
 # README
 
 https://ich-r-u.herokuapp.com/
